@@ -34,8 +34,9 @@ router.delete('/:id', (req, res) => {
     const taskId = req.params.id;
     Task.delete(taskId, (err) => {
         if (err) return res.status(500).json({ error: 'Error deleting task' });
-        res.status(204).send(); // No content
+        res.status(204).send(); 
     });
+
 });
 
 module.exports = router;
